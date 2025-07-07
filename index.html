@@ -3,52 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <title>Dialogue Student Association</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <header>
-    <div class="logo"><img src="logo.png" alt=""></div>
+    <div class="logo"><img src="logo.png" alt="Logo"></div>
     <nav class="nav">
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#">About us</a></li>
-        <!-- <li><a href="#who-we-are">Who We Are</a></li>
-        <li><a href="#our-mission">Our Mission</a></li> -->
         <li><a href="#">Events</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#"><Donate></Donate></a></li>
+        <li><a href="#">Donate</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>DSA at UT Austin</h1>
-      <p>Dialogue Student Association</p>
-    </section>
-
-    <section id="who-we-are" class="full-section">
-      <div class="who-content">
-        <h2 class="who-title">Who We Are</h2>
-        <div class="who-container">
-          <div class="who-text">
-            <p>
-              We’re a passionate group of creators, thinkers, and doers focused on building a vibrant community through events and storytelling.We’re a passionate group of creators, thinkers, and doers focused on building a vibrant community through events and storytelling.We’re a passionate group of creators, thinkers, and doers focused on building a vibrant community through events and storytelling.
-              <br><br>
-              Our team thrives on collaboration, innovation, and the shared goal of bringing people together in meaningful ways.
-            </p>
-          </div>
-          <div class="who-image">
-            <img src="https://via.placeholder.com/400x300" alt="Team Photo" />
-          </div>
-        </div>
+  <div class="scroll-container">
+    <section class="hero scroll-area">
+      <div class="hero-text">
+        <h1 id="line1"></h1>
+        <h1 id="line2"></h1>
       </div>
     </section>
+<section id="who-we-are" class="full-section scroll-area">
+  <div class="who-content">
+    <h2 class="who-title">Who We Are</h2>
+    <div class="who-container">
+      <div class="who-text">
+        <p>
+          We’re a passionate group of creators, thinkers, and doers focused on building a vibrant community through events and storytelling.
+          <br><br>
+          Our team thrives on collaboration, innovation, and the shared goal of bringing people together in meaningful ways.
+        </p>
+      </div>
+      <div class="who-images-layout">
+        <img src="images/whoweare1.jpg" class="img img1" alt="Who We Are 1">
+        <img src="images/whoweare2.jpg" class="img img2" alt="Who We Are 2">
+        <img src="images/whoweare3.jpg" class="img img3" alt="Who We Are 3">
+        <img src="images/whoweare4.jpg" class="img img4" alt="Who We Are 4">
+        <img src="images/whoweare5.jpg" class="img img5" alt="Who We Are 5">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
-    <section id="our-mission" class="mission-section">
+
+    <section id="our-mission" class="mission-section scroll-area">
       <div class="mission-overlay">
         <div class="mission-content">
           <h2>Our Mission</h2>
@@ -58,7 +62,30 @@
         </div>
       </div>
     </section>
+  </div>
 
-  </main>
+  <script>
+    function typeLine(elementId, text, delay = 0, speed = 50, onDone = null) {
+      const el = document.getElementById(elementId);
+      el.textContent = '';
+      el.style.borderRight = '3px solid white';
+      let i = 0;
+      setTimeout(() => {
+        const interval = setInterval(() => {
+          el.textContent += text.charAt(i);
+          i++;
+          if (i === text.length) {
+            clearInterval(interval);
+            el.style.borderRight = 'none';
+            if (onDone) onDone();
+          }
+        }, speed);
+      }, delay);
+    }
+
+    typeLine("line1", "Dialogue Student Association", 0, 50, () => {
+      typeLine("line2", "@ UT Austin", 400, 50);
+    });
+  </script>
 </body>
 </html>
