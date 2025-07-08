@@ -11,11 +11,11 @@ function showSlides() {
 
   slides[slideIndex - 1].classList.add("active");
 
-  setTimeout(showSlides, 2500); // ⏱️ 4 seconds per photo
+  setTimeout(showSlides, 2800); // ⏱️ 4 seconds per photo
 }
 
 // Show the first image instantly
 if (slides.length > 0) {
   slides[0].classList.add("active");
-  setTimeout(showSlides, 2500);
+  setTimeout(showSlides, 2800);
 }
