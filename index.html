@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dialogue Student Association</title>
   <link rel="stylesheet" href="index.css" />
+
 </head>
 <body>
   <header>
@@ -16,11 +17,17 @@
 
     <nav class="nav">
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="about.html">About us</a></li>
+        <li><a href="about.html">About Us</a></li>
+		        <li>|</li>
+
         <li><a href="#">Events</a></li>
+		        <li>|</li>
+
         <li><a href="#">Contact</a></li>
+		        <li>|</li>
+
         <li><a href="#">Donate</a></li>
+
       </ul>
     </nav>
   </header>
@@ -43,13 +50,30 @@
           Our team thrives on collaboration, innovation, and the shared goal of bringing people together in meaningful ways.
         </p>
       </div>
-      <div class="who-images-layout">
-        <img src="images/whoweare1.jpg" class="img img1" alt="Who We Are 1">
-        <img src="images/whoweare2.jpg" class="img img2" alt="Who We Are 2">
-        <img src="images/whoweare3.jpg" class="img img3" alt="Who We Are 3">
-        <img src="images/whoweare4.jpg" class="img img4" alt="Who We Are 4">
-        <img src="images/whoweare5.jpg" class="img img5" alt="Who We Are 5">
-      </div>
+<div class="slideshow-wrapper">
+  <div class="slideshow-container">
+    <div class="mySlides"><img src="images/whoweare1.jpg"></div>
+
+    <div class="mySlides"><img src="images/whoweare3.jpg"></div>
+    <div class="mySlides"><img src="images/whoweare4.jpg"></div>
+    <div class="mySlides"><img src="images/whoweare5.jpg"></div>
+    <div class="mySlides"><img src="images/whoweare6.jpg"></div>
+    <div class="mySlides"><img src="images/whoweare7.jpg"></div>
+    <div class="mySlides"><img src="images/whoweare8.jpg"></div>
+  </div>
+</div>
+
+<div style="text-align:center; margin-top: 20px;">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+
     </div>
   </div>
 </section>
@@ -92,5 +116,8 @@
       typeLine("line2", "@ UT Austin", 400, 50);
     });
   </script>
+  
+    <script src="js/whoweare_slideshow.js"></script>
+
 </body>
 </html>

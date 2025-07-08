@@ -39,13 +39,19 @@
     margin-right: 0;
   }
   
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.05rem;
-  }
-  
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: "Georgia", serif;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ff4545; /* bright red hover */
+}
+
   .about-section {
     background-color: #f7f3f3;
     padding: 60px 20px;

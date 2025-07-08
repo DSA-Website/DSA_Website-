@@ -46,16 +46,34 @@ header {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
+
+.nav-links li {
+  margin: 0 24px;
+  display: inline-block;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
 .nav-links a {
-  color: #eee;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: "Georgia", serif;
+  transition: color 0.2s ease;
 }
+
 .nav-links a:hover {
-  color: #e23549;
+  color: #ff4545;
 }
 
 /* Hero Section */
@@ -109,19 +127,24 @@ header {
 
 /* Who We Are Section */
 .full-section {
-  background-color: #fff;
-  color: black;
+  background-color: #f7f3f3; /* instead of white */
+  color: #420000; /* purplish red heading color */
   padding: 4rem 2rem;
   text-align: center;
 }
+
 .who-content {
   max-width: 1200px;
   margin: 0 auto;
 }
 .who-title {
-  font-size: 2.7rem;
-  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: #420000;
+  margin-bottom: 20px;
 }
+
+
+
 .who-container {
   display: flex;
   flex-wrap: wrap;
@@ -137,7 +160,7 @@ header {
 }
 .who-text p {
   font-size: 1.2rem;
-  color: #444;
+  color: #333;
   line-height: 1.7;
 }
 .who-image {
@@ -221,37 +244,43 @@ header {
   transition: transform 0.3s ease;
 }
 
-.img1 {
-  top: 5%;
-  left: 25%;
-  transform: rotate(-5deg) scale(1);
-  z-index: 2;
+.slideshow-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 4rem 5rem 0; /* more right and more bottom */
 }
 
-.img2 {
-  top: 20%;
-  left: 65%;
-  transform: rotate(4deg) scale(0.98);
-  z-index: 1;
+.slideshow-container {
+  width: 650px;
+  height: 430px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.4);
 }
 
-.img3 {
-  top: 35%;
-  left: 45%;
-  transform: translate(-50%, -50%) scale(1.1);
-  z-index: 3;
+
+.mySlides {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  z-index: 0;
 }
 
-.img4 {
-  top: 55%;
-  left: 68%;
-  transform: rotate(-3deg) scale(1);
-  z-index: 2;
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
-.img5 {
-  top: 70%;
-  left: 22%;
-  transform: rotate(6deg) scale(0.95);
+.mySlides.active {
+  opacity: 1;
   z-index: 1;
 }
