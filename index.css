@@ -173,7 +173,7 @@ header {
 
 /* Mission Section */
 .mission-section {
-  background-image: url('example.jpg');
+  background-image: url(../tempimg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
