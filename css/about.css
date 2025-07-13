@@ -19,12 +19,12 @@ body {
 
 /* Header/Navbar styling */
 header {
-  background-color: #f7f3f3;
-  color: #420000;
-  padding: 1rem 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background-color: #f7f3f3;
+  padding: 1rem 2rem;
+  color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -32,7 +32,7 @@ header {
 }
 
 .logo img {
-  height: 35px;
+  max-height: 35px;
 }
 
 .nav-links {
@@ -40,11 +40,20 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
+  color: #420000;
 }
 
 .nav-links li {
   margin: 0 24px;
   display: inline-block;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
 }
 
 .nav-links a {
