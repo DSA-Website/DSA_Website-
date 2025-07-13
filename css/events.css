@@ -102,8 +102,8 @@ header {
 }
 
 .slideshow-wrapper {
-  width: 70vh;
-  height: 70vh;
+  width: 60vh;
+  height: 60vh;
   position: relative;
   overflow: hidden;
   border-radius: 28px;
