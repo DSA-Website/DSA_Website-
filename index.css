@@ -10,6 +10,17 @@
   box-sizing: border-box;
 }
 
+.scroll-container {
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+  height: calc(100vh - 80px);
+}
+
 body, html {
   height: 100%;
   scroll-behavior: smooth;
@@ -18,17 +29,6 @@ body, html {
   color: white;
 }
 
-.scroll-container {
-  height: 100vh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-}
-
-.scroll-area {
-  scroll-snap-align: start;
-  height: 100vh;
-}
-/* Header */
 header {
   background-color: #f7f3f3;
   color: #420000;
@@ -40,6 +40,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  height: 80px;
 }
 
 
@@ -47,7 +48,6 @@ header {
   height: 50px;
 }
 
-/* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -83,8 +83,6 @@ header {
   color: #ff4545;
 }
 
-
-/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
@@ -184,7 +182,7 @@ header {
 
 .mission-section {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 80px);
   overflow: hidden;
   display: flex;
   align-items: center;

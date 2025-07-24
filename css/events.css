@@ -17,26 +17,30 @@ body {
   background-color: #f7f3f3;
   color: #420000;
 }
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #f7f3f3;
-  padding: 1rem 2rem;
-  color: white;
+  color: #420000;
+  padding: 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  height: 80px;
 }
 
+
 .logo img {
-  max-height: 35px;
+  height: 50px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   color: #420000;
@@ -59,7 +63,7 @@ header {
   text-decoration: none;
   color: #420000;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-family: "Georgia", serif;
   transition: color 0.2s ease;
 }
@@ -71,7 +75,7 @@ header {
 
 
 .events-section {
-  padding: 60px 40px;
+  padding: 25px 40px;
   text-align: center;
 }
 

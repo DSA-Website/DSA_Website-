@@ -1,0 +1,51 @@
+.donate-section {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f7f3f3;
+  color: #420000;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.donate-section h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.donate-section p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.zelle-box {
+  background-color: #fff;
+  border: 2px dashed #420000;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(66, 0, 0, 0.2);
+}
+
+.zelle-box h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.zelle-box p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.zelle-box code {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #420000;
+  font-weight: bold;
+}
