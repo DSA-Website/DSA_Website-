@@ -28,24 +28,30 @@ body, html {
   scroll-snap-align: start;
   height: 100vh;
 }
-
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #f7f3f3;
-  padding: 1rem 2rem;
-  color: white;
+  color: #420000;
+  padding: 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+
+.logo img {
+  height: 50px;
+}
+
+/* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   color: #420000;
@@ -68,7 +74,7 @@ header {
   text-decoration: none;
   color: #420000;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-family: "Georgia", serif;
   transition: color 0.2s ease;
 }
@@ -76,6 +82,7 @@ header {
 .nav-links a:hover {
   color: #ff4545;
 }
+
 
 /* Hero Section */
 .hero {
@@ -94,6 +101,7 @@ header {
   background-size: 400% 100%;
   animation: rgbFlow 20s linear infinite;
   text-align: center;
+
 }
 
 .hero-text {
@@ -166,35 +174,46 @@ header {
   font-size: 1.25rem;
   color: #420000;
   line-height: 1.8;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-align: justify;
 }
 
 
 /* Mission Section */
+
+
 .mission-section {
-  background-image: url(../tempimg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 2rem;
 }
-.mission-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+
+.mission-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  object-position: center 90%;
+  z-index: 0;
+  filter: brightness(50%); /* same as rgba(0,0,0,0.5) shadow effect */
 }
+
 .mission-content {
-  text-align: center;
-  color: #fff;
+  position: relative;
+  z-index: 1;
   padding: 2rem;
+  border-radius: 12px;
   max-width: 700px;
+  color: white;
 }
+
 .mission-content h2 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
@@ -205,10 +224,42 @@ header {
   line-height: 1.6;
 }
 
-/* Logo */
-.logo img {
-  max-height: 35px;
+.buzzword-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
+
+.buzzword-column {
+  flex: 1 1 40%;
+  min-width: 250px;
+  color: #fff;
+  text-align: center;
+}
+
+.buzzword-column h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.buzzword-line {
+  width: 60px;
+  height: 2px;
+  background-color: #ddd;
+  margin: 0 auto 1rem auto;
+}
+
+.buzzword-column p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+
+
+
 
 /* WebKit-based browsers (Chrome, Edge, Safari) */
 .scroll-container::-webkit-scrollbar {
@@ -239,7 +290,7 @@ header {
   width: 650px;
   height: 430px;
   position: relative;
-  border-radius: 20px;
+  border-radius: 40px;
   overflow: hidden;
   border: 7px solid #420000; /* elegant maroon border */
 	box-shadow: 0 8px 30px rgba(66, 0, 0, 0.67);

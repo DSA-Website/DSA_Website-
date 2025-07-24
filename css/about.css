@@ -34,7 +34,6 @@ header {
 .logo img {
   max-height: 35px;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -60,7 +59,7 @@ header {
   text-decoration: none;
   color: #420000;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-family: "Georgia", serif;
   transition: color 0.2s ease;
 }
@@ -73,6 +72,7 @@ header {
 .about-section {
   background-color: #f7f3f3;
   padding: 60px 20px;
+
   text-align: center;
 }
 

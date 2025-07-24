@@ -18,7 +18,7 @@ const slideshows = {
     ...Array.from({ length: 6 }, (_, i) => `images/events/Game Night/gn${i + 1}.jpg`)
   ],
   "thanksgiving-slideshow": [
-    ...Array.from({ length: 8 }, (_, i) => `images/events/Thanksgiving Dinner/td${i + 1}.jpg`)
+    ...Array.from({ length: 7 }, (_, i) => `images/events/Thanksgiving Dinner/td${i + 1}.jpg`)
   ],
   "iftar-slideshow": [
     ...Array.from({ length: 11 }, (_, i) => `images/events/Iftar/if${i + 1}.jpg`)
