@@ -21,7 +21,7 @@ body {
 header {
   background-color: #f7f3f3;
   color: #420000;
-  padding: 1rem 2rem;
+  padding: 1.1rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,14 +32,15 @@ header {
 }
 
 .logo img {
-  height: 35px;
+  height: 50px;
+  display: block;  
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
+  color: #420000;
 }
 
 .nav-links li {
@@ -47,11 +48,19 @@ header {
   display: inline-block;
 }
 
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
 .nav-links a {
   text-decoration: none;
   color: #420000;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-family: "Georgia", serif;
   transition: color 0.2s ease;
 }
@@ -64,6 +73,7 @@ header {
 .about-section {
   background-color: #f7f3f3;
   padding: 60px 20px;
+
   text-align: center;
 }
 

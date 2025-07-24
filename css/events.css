@@ -17,7 +17,6 @@ body {
   background-color: #f7f3f3;
   color: #420000;
 }
-
 header {
   background-color: #f7f3f3;
   color: #420000;
@@ -40,11 +39,20 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
+  color: #420000;
 }
 
 .nav-links li {
-  margin: 0 28px;
+  margin: 0 24px;
   display: inline-block;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
 }
 
 .nav-links a {
@@ -60,15 +68,17 @@ header {
   color: #ff4545;
 }
 
+
+
 .events-section {
   padding: 60px 40px;
   text-align: center;
 }
 
 .events-section h1 {
-  font-size: 5rem;
-  margin-bottom: 100px;
-  text-align: center;
+  font-size: 4rem;
+  margin-top: 40px;  /* <-- THIS is the missing piece */
+  margin-bottom: 40px;
 }
 
 .event-category {
