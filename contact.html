@@ -26,29 +26,32 @@
     </nav>
   </header>
 
-  <section class="contact-section">
-    <h1>Contact Us</h1>
-    <p class="sub-intro">
-      Please contact us with any questions you may have. We look forward to hearing from you!
-    </p>
+  <!-- ✅ Scrollable content container starts here -->
+  <div class="scroll-container">
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <p class="sub-intro">
+        Please contact us with any questions you may have. We look forward to hearing from you!
+      </p>
 
-    <div class="contact-info">
-      <p>Email: <a href="mailto:dsa.ut.atx@gmail.com">dsa.ut.atx@gmail.com</a></p>
-      <a href="https://instagram.com/texasdsa" target="_blank">
-        <img src="images/instagramlogo.jpg" alt="Instagram" class="instagram-icon"/>
-      </a>
-    </div>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:dsa.ut.atx@gmail.com">dsa.ut.atx@gmail.com</a></p>
+        <a href="https://instagram.com/texasdsa" target="_blank">
+          <img src="images/instagramlogo.jpg" alt="Instagram" class="instagram-icon"/>
+        </a>
+      </div>
 
-    <!-- ✅ Fully Working Web3Forms Contact Form -->
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-      <input type="hidden" name="access_key" value="9f820af7-73e7-41fb-a5de-3292a8dd59d2" />
-      <input type="hidden" name="redirect" value="thankyou.html" />
+      <!-- ✅ Fully Working Web3Forms Contact Form -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="9f820af7-73e7-41fb-a5de-3292a8dd59d2" />
+        <input type="hidden" name="redirect" value="thankyou.html" />
 
-      <input type="text" name="name" placeholder="Your Name" required class="contact-inputs" />
-      <input type="email" name="email" placeholder="Your Email" required class="contact-inputs" />
-      <textarea name="message" rows="6" placeholder="Your Message" required class="contact-inputs"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+        <input type="text" name="name" placeholder="Your Name" required class="contact-inputs" />
+        <input type="email" name="email" placeholder="Your Email" required class="contact-inputs" />
+        <textarea name="message" rows="6" placeholder="Your Message" required class="contact-inputs"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
 </body>
 </html>

@@ -81,9 +81,10 @@ header {
 
 .events-section h1 {
   font-size: 4rem;
-  margin-top: 40px;  /* <-- THIS is the missing piece */
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;  /* was 40px */
 }
+
 
 .event-category {
   display: flex;
@@ -176,4 +177,55 @@ header {
   color: #420000;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.scroll-container {
+  height: calc(100vh - 80px); /* keeps scrollable area under navbar */
+  overflow-y: auto;
+}
+
+
+
+/* Scrollbar Styling */
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #420000;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #f7f3f3;
+  border-radius: 4px;
+}
+
+.calendar-preview-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
+  margin-bottom: 60px; /* <- gives more breathing room */
+}
+
+
+.calendar-preview-link a {
+  color: #420000;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.calendar-preview-link a:hover {
+  color: #ff4545;
+  text-decoration: underline;
+}
+
+.attention-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }

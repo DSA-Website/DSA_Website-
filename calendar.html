@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendar - Dialogue Student Association</title>
+  <link rel="stylesheet" href="css/calendar.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" />
+      </a>
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li>|</li>
+        <li><a href="events.html">Events</a></li>
+        <li>|</li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>|</li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Wrapped in scroll container -->
+  <div class="scroll-container">
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button id="prevMonth" class="month-nav">&lt;</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextMonth" class="month-nav">&gt;</button>
+      </div>
+      <div class="calendar" id="calendar"></div>
+    </div>
+
+    <div class="event-popup" id="eventPopup">
+      <button class="close-btn" id="closePopup">×</button>
+      <div class="event-details" id="eventDetails"></div>
+    </div>
+  </div>
+
+  <script src="js/calendar.js"></script>
+</body>
+</html>

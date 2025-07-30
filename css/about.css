@@ -181,3 +181,24 @@ header {
     margin-bottom: 20px;
   }
 }
+
+.scroll-container {
+  height: calc(100vh - 80px); /* navbar is 80px tall */
+  overflow-y: auto;	
+}
+
+
+/* Custom scrollbar styling */
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #420000;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #f7f3f3;
+  border-radius: 4px;
+}
+

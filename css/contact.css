@@ -72,7 +72,7 @@ header {
 
 /* Contact Section */
 .contact-section {
-  padding: 80px 40px;
+  padding: 40px 40px;
   text-align: center;
 }
 
@@ -198,3 +198,23 @@ header {
 .thankyou-section .back-link:hover {
   background-color: #7a3b3b;
 }
+
+.scroll-container {
+  height: calc(100vh - 80px); /* adjust for navbar */
+  overflow-y: auto;
+}
+
+/* Optional but keeps consistency with your aesthetic */
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #420000;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #f7f3f3;
+  border-radius: 4px;
+}
+
