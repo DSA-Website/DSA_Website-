@@ -1,9 +1,3 @@
-@font-face {
-  font-family: 'PlayfairDisplay';
-  src: url('PlayfairDisplay-Medium.ttf') format('truetype');
-  font-display: swap;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -18,61 +12,6 @@ body, html {
   color: white;
 }
 
-header {
-  background-color: #f7f3f3;
-  color: #420000;
-  padding: 1rem 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  height: 80px;
-}
-
-
-.logo img {
-  height: 50px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  color: #420000;
-}
-
-.nav-links li {
-  margin: 0 24px;
-  display: inline-block;
-}
-
-.nav-links li:first-child {
-  margin-left: 0;
-}
-
-.nav-links li:last-child {
-  margin-right: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #420000;
-  font-weight: bold;
-  font-size: 1.4rem;
-  font-family: "Georgia", serif;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #ff4545;
-}
-
-/* About Section */
 .about-section {
   background-color: #f7f3f3;
   padding: 60px 20px;
@@ -109,6 +48,8 @@ header {
   margin: 60px auto;
 }
 
+
+
 .member:nth-child(odd) {
   margin-left: 10%;
   margin-right: auto;
@@ -120,9 +61,12 @@ header {
   margin-right: 10%;
   flex-direction: row-reverse;
 }
+
 .member img {
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: 100%;
+  max-width: 280px;
+  max-height: 280px;
   aspect-ratio: 1 / 1; /* Ensures square shape */
   object-fit: cover;
   border-radius: 12px;
@@ -167,10 +111,9 @@ header {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 700px) {
-  .member,
-  .member:nth-child(even) {
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+  .member {
+    flex-direction: column !important;
     align-items: center;
     text-align: center;
     padding: 30px;
@@ -179,12 +122,17 @@ header {
 
   .member img {
     margin-bottom: 20px;
+    order: -1;
+  }
+
+  .member-content {
+    order: 0; /* text below */
   }
 }
 
 .scroll-container {
-  height: calc(100vh - 80px); /* navbar is 80px tall */
-  overflow-y: auto;	
+  height: calc(100vh - 5rem);
+  overflow-y: auto;
 }
 
 
@@ -201,4 +149,3 @@ header {
   background: #f7f3f3;
   border-radius: 4px;
 }
-

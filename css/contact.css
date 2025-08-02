@@ -16,61 +16,6 @@ body {
   color: #420000;
 }
 
-header {
-  background-color: #f7f3f3;
-  color: #420000;
-  padding: 1rem 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  height: 80px;
-}
-
-
-.logo img {
-  height: 50px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  color: #420000;
-}
-
-.nav-links li {
-  margin: 0 24px;
-  display: inline-block;
-}
-
-.nav-links li:first-child {
-  margin-left: 0;
-}
-
-.nav-links li:last-child {
-  margin-right: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #420000;
-  font-weight: bold;
-  font-size: 1.4rem;
-  font-family: "Georgia", serif;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #ff4545;
-}
-
-/* Contact Section */
 .contact-section {
   padding: 40px 40px;
   text-align: center;
@@ -217,4 +162,3 @@ header {
   background: #f7f3f3;
   border-radius: 4px;
 }
-
