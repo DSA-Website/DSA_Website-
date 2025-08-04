@@ -149,3 +149,22 @@ body, html {
   background: #f7f3f3;
   border-radius: 4px;
 }
+
+
+
+
+#mahir-member {
+  position: relative;
+}
+
+.about-handler {
+  position: absolute;
+  top: 63%;   
+  left: 78.5%;
+  width: 6px;
+  height: 6px;
+  cursor: default;
+  z-index: 5;
+  border-radius: 50%;
+  opacity: 0.8;
+}

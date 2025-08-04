@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Page</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    #resume {
+      display: none;
+      max-width: 90%;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>...</h1>
+  <p>whatre u doing here?</p>
+  <p>?⍴☈ℇ⎎⎎ ⎎⍲⍓ℇ ⎎ℇℚ⌰ℇ☊⍧ℇ ⍑⌾ ⎎ℇℇ ⎎ℇ⍧☈ℇ⍑ℇ???</p>
+
+  <img src="images/resume.jpg" alt="Resume" id="resume">
+
+  <script>
+    let code = '';
+    document.addEventListener('keydown', (e) => {
+      code += e.key;
+      if (code.endsWith('1453')) {
+        document.getElementById('resume').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
