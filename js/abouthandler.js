@@ -17,7 +17,7 @@ document.addEventListener('keydown', (e) => {
   if (secretMode) {
     inputSequence += e.key;
     if (inputSequence === '1453') {
-      window.location.href = '/index2/index2.html';  // ✅ use full path from root
+      window.location.href = '/index2/';  // ✅ Root-relative, correct folder
     }
   }
 });
