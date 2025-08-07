@@ -3,7 +3,7 @@ const slideshows = {
     ...Array.from({ length: 5 }, (_, i) => `/images/events/GeneralMeetings/gm${i + 1}.jpg`)
   ],
   "bakesale-slideshow": [
-    ...Array.from({ length: 8 }, (_, i) => `/images/events/BakeSales/bakesale${i + 1}.jpg`)
+    ...Array.from({ length: 7 }, (_, i) => `/images/events/BakeSales/bakesale${i + 1}.jpg`)
   ],
   "profitshare-slideshow": [
     ...Array.from({ length: 5 }, (_, i) => `/images/events/ProfitShares/share${i + 1}.jpg`)
