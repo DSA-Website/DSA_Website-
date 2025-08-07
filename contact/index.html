@@ -1,31 +1,34 @@
 <!-- CONTACT -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Dialogue Student Association</title>
+
+  <!-- ✅ Root-relative CSS paths -->
   <link rel="stylesheet" href="/css/contact.css" />
   <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo" />
+      <!-- ✅ Root-relative logo and homepage link -->
+      <a href="/index.html">
+        <img src="/images/logo.png" alt="Logo" />
       </a>
     </div>
     <nav class="nav">
       <ul class="nav-links">
-        <li><a href="about/">About Us</a></li>
-	        <li class="no-select-line">|</li>
-        <li><a href="events/">Events</a></li>
-	        <li class="no-select-line">|</li>
-        <li><a href="contact/">Contact</a></li>
-	        <li class="no-select-line">|</li>
-        <li><a href="donate/">Donate</a></li>
+        <!-- ✅ All links root-relative -->
+        <li><a href="/about/">About Us</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/events/">Events</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/contact/">Contact</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/donate/">Donate</a></li>
       </ul>
     </nav>
   </header>
@@ -40,15 +43,19 @@
 
       <div class="contact-info">
         <p>Email: <a href="mailto:dsa.ut.atx@gmail.com">dsa.ut.atx@gmail.com</a></p>
+
+        <!-- ✅ Root-relative image path -->
         <a href="https://instagram.com/texasdsa" target="_blank">
-          <img src="images/instagramlogo.jpg" alt="Instagram" class="instagram-icon"/>
+          <img src="/images/instagramlogo.jpg" alt="Instagram" class="instagram-icon"/>
         </a>
       </div>
 
       <!-- ✅ Fully Working Web3Forms Contact Form -->
       <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
         <input type="hidden" name="access_key" value="9f820af7-73e7-41fb-a5de-3292a8dd59d2" />
-        <input type="hidden" name="redirect" value="thankyou.html" />
+
+        <!-- ✅ Root-relative redirect path -->
+        <input type="hidden" name="redirect" value="/thankyou/" />
 
         <input type="text" name="name" placeholder="Your Name" required class="contact-inputs" />
         <input type="email" name="email" placeholder="Your Email" required class="contact-inputs" />

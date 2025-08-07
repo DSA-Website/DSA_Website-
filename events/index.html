@@ -1,31 +1,35 @@
 <!-- EVENTS -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Events - Dialogue Student Association</title>
+
+  <!-- ✅ Root-relative CSS -->
   <link rel="stylesheet" href="/css/events.css" />
   <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo">
+      <!-- ✅ Root-relative homepage link and logo -->
+      <a href="/index.html">
+        <img src="/images/logo.png" alt="Logo">
       </a>
     </div>
+
     <nav class="nav">
       <ul class="nav-links">
-        <li><a href="about/">About Us</a></li>
-	        <li class="no-select-line">|</li>
-        <li><a href="events/">Events</a></li>
-	        <li class="no-select-line">|</li>
-        <li><a href="contact/">Contact</a></li>
-	        <li class="no-select-line">|</li>
-        <li><a href="donate/">Donate</a></li>
+        <!-- ✅ All navbar links made root-relative -->
+        <li><a href="/about/">About Us</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/events/">Events</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/contact/">Contact</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/donate/">Donate</a></li>
       </ul>
     </nav>
   </header>
@@ -34,11 +38,13 @@
   <div class="scroll-container">
     <section class="events-section">
       <h1>Past Events</h1>
-<div class="calendar-preview-link">
-  <img src="images/attention.jpg" alt="Attention" class="attention-icon">
-  <a href="calendar.html">Click here to view upcoming events!</a>
-  <img src="images/attention.jpg" alt="Attention" class="attention-icon">
-</div>
+
+      <!-- ✅ Root-relative image and link to calendar -->
+      <div class="calendar-preview-link">
+        <img src="/images/attention.jpg" alt="Attention" class="attention-icon">
+        <a href="/calendar/">Click here to view upcoming events!</a>
+        <img src="/images/attention.jpg" alt="Attention" class="attention-icon">
+      </div>
 
       <div class="event-category">
         <div class="event-text">
@@ -120,11 +126,10 @@
         </div>
         <div class="slideshow" id="bsateacoffee-slideshow"></div>
       </div>
-
-
     </section>
   </div>
 
+  <!-- ✅ Root-relative JS -->
   <script src="/js/events.js"></script>
 </body>
 </html>

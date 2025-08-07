@@ -1,31 +1,35 @@
 <!-- CALENDAR -->
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Calendar - Dialogue Student Association</title>
+
+  <!-- ✅ Root-relative CSS links -->
   <link rel="stylesheet" href="/css/calendar.css" />
   <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo" />
+      <!-- ✅ Root-relative homepage link and image -->
+      <a href="/index.html">
+        <img src="/images/logo.png" alt="Logo" />
       </a>
     </div>
+
     <nav class="nav">
       <ul class="nav-links">
-        <li><a href="about/">About Us</a></li>
-        <li>|</li>
-        <li><a href="events/">Events</a></li>
-        <li>|</li>
-        <li><a href="contact/">Contact</a></li>
-        <li>|</li>
-        <li><a href="donate/">Donate</a></li>
+        <!-- ✅ All nav links updated to root-relative paths -->
+        <li><a href="/about/">About Us</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/events/">Events</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/contact/">Contact</a></li>
+        <li class="no-select-line">|</li>
+        <li><a href="/donate/">Donate</a></li>
       </ul>
     </nav>
   </header>
@@ -47,6 +51,7 @@
     </div>
   </div>
 
+  <!-- ✅ Root-relative JavaScript file -->
   <script src="/js/calendar.js"></script>
 </body>
 </html>
