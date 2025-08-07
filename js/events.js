@@ -1,30 +1,30 @@
 const slideshows = {
   "meetings-slideshow": [
-    ...Array.from({ length: 5 }, (_, i) => `images/events/GeneralMeetings/gm${i + 1}.jpg`)
+    ...Array.from({ length: 5 }, (_, i) => `/images/events/GeneralMeetings/gm${i + 1}.jpg`)
   ],
   "bakesale-slideshow": [
-    ...Array.from({ length: 8 }, (_, i) => `images/events/BakeSales/bakesale${i + 1}.jpg`)
+    ...Array.from({ length: 8 }, (_, i) => `/images/events/BakeSales/bakesale${i + 1}.jpg`)
   ],
   "profitshare-slideshow": [
-    ...Array.from({ length: 5 }, (_, i) => `images/events/ProfitShares/share${i + 1}.jpg`)
+    ...Array.from({ length: 5 }, (_, i) => `/images/events/ProfitShares/share${i + 1}.jpg`)
   ],
   "picnic-slideshow": [
-    ...Array.from({ length: 5 }, (_, i) => `images/events/Picnic/picnic${i + 1}.jpg`)
+    ...Array.from({ length: 5 }, (_, i) => `/images/events/Picnic/picnic${i + 1}.jpg`)
   ],
   "dinner-slideshow": [
-    ...Array.from({ length: 8 }, (_, i) => `images/events/AnnualDinners/ad${i + 1}.jpg`)
+    ...Array.from({ length: 8 }, (_, i) => `/images/events/AnnualDinners/ad${i + 1}.jpg`)
   ],
   "gamenight-slideshow": [
-    ...Array.from({ length: 6 }, (_, i) => `images/events/GameNight/gn${i + 1}.jpg`)
+    ...Array.from({ length: 6 }, (_, i) => `/images/events/GameNight/gn${i + 1}.jpg`)
   ],
   "thanksgiving-slideshow": [
-    ...Array.from({ length: 7 }, (_, i) => `images/events/ThanksgivingDinner/td${i + 1}.jpg`)
+    ...Array.from({ length: 7 }, (_, i) => `/images/events/ThanksgivingDinner/td${i + 1}.jpg`)
   ],
   "iftar-slideshow": [
-    ...Array.from({ length: 11 }, (_, i) => `images/events/Iftar/if${i + 1}.jpg`)
+    ...Array.from({ length: 11 }, (_, i) => `/images/events/Iftar/if${i + 1}.jpg`)
   ],
   "bsateacoffee-slideshow": [
-    ...Array.from({ length: 9 }, (_, i) => `images/events/BSATeaCoffee/t${i + 1}.jpg`)
+    ...Array.from({ length: 9 }, (_, i) => `/images/events/BSATeaCoffee/t${i + 1}.jpg`)
   ]
 };
 
