@@ -74,13 +74,11 @@ body, html {
   }
 }
 
-/* Typing BG animation */
 @keyframes rgbFlow {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
 
-/* Who We Are Section */
 .full-section {
   background-color: #f7f3f3;
   color: #420000;
@@ -105,7 +103,7 @@ body, html {
   margin: 0 auto;
 }
 
-@media (max-height: 650px) {
+@media (max-height: 850px) {
   .who-content {
     max-height: none;
   }
