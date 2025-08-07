@@ -162,3 +162,15 @@ body {
   background: #f7f3f3;
   border-radius: 4px;
 }
+
+.social-icon {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
