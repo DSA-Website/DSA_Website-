@@ -12,7 +12,7 @@ const events = {
   },
   "2025-09-03": {
     title: "General Meeting #1",
-    details: "Join us for our first general meeting of the semester! Starts at 6:30 PM."
+    details: "Join us for our first general meeting of the semester! Starts at 6:00 PM."
   },
   "2025-09-08": {
     title: "Bakesale #1",
