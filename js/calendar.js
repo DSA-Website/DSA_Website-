@@ -4,15 +4,15 @@ const events = {
     title: "Semester Starts",
     details: "Welcome back! Classes begin for the Fall semester."
   },
-  "2025-08-29": {
-    title: "General Meeting #1",
-    details: "Join us for our first general meeting of the semester!"
-  },
 
   // September 2025
   "2025-09-01": {
     title: "Labor Day - No Classes",
     details: "Campus is closed in observance of Labor Day."
+  },
+  "2025-09-03": {
+    title: "General Meeting #1",
+    details: "Join us for our first general meeting of the semester! Starts at 6:30 PM."
   },
   "2025-09-08": {
     title: "Bakesale #1",
@@ -89,6 +89,7 @@ const events = {
     details: "Final exam week continues."
   }
 };
+
 
 const calendar = document.getElementById('calendar');
 const monthYear = document.getElementById('monthYear');
