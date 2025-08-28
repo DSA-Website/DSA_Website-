@@ -10,7 +10,7 @@ const events = {
     title: "Labor Day - No Classes",
     details: "Campus is closed in observance of Labor Day."
   },
-  "2025-09-03": {
+  "2025-09-04": {
     title: "General Meeting #1",
     details: "Join us for our first general meeting of the semester! Starts at 6:00 PM."
   },
