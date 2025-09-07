@@ -14,9 +14,9 @@ const events = {
     title: "General Meeting #1",
     details: "Join us for our first general meeting of the semester! Starts at 6:00 PM."
   },
-  "2025-09-08": {
+  "2025-09-09": {
     title: "Bakesale #1",
-    details: "Support our fundraising on Speedway, 10am–2pm."
+    details: "Support our fundraising on Speedway, 12pm–4pm!"
   },
   "2025-09-25": {
     title: "Tea/Coffee Night",
