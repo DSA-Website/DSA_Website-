@@ -36,9 +36,9 @@ const events = {
     title: "Philanthropy Event",
     details: "A special service event—details TBA."
   },
-  "2025-10-20": {
+  "2025-9-24": {
     title: "Tea/Coffee Night",
-    details: "Another cozy night with snacks and hot drinks."
+    details: "Another cozy night with snacks and hot drinks. Join us from 7 - 8:30 pm!"
   },
 
   // November 2025
