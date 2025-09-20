@@ -18,7 +18,7 @@ const events = {
     title: "Bakesale #1",
     details: "Support our fundraising on Speedway, 12pm–4pm!"
   },
-  "2025-09-25": {
+  "2025-09-24": {
     title: "Tea/Coffee Night",
     details: "Relaxing evening with hot drinks and conversation."
   },
