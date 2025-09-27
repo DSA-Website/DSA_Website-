@@ -167,7 +167,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px; /* space between icons */
+  gap: 16px;
   margin-top: 10px;
 }
 
@@ -176,6 +176,7 @@ body {
   width: 32px;
   object-fit: contain;
   transition: transform 0.2s ease;
+  border-radius: 5px;
 }
 
 .social-icon:hover {

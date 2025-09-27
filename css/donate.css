@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PlayfairDisplay', Georgia, serif;
+  background-color: #f7f3f3;
+  color: #420000;
+}
+
 .donate-section {
   min-height: calc(100vh - 80px);
   display: flex;
@@ -24,6 +36,32 @@
   margin-bottom: 3rem;
 }
 
+.donation-links-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-image {
+  border-radius: 12px;
+}
+
+.cashapp-box {
+  background-color: #00E013;
+  border-radius: 12px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(66, 0, 0, 0.2);
+  order: 0;
+}
+
+.venmo-box {
+  background-color: #008CFF;
+  border-radius: 12px;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(66, 0, 0, 0.2);
+  order: 2;
+}
+
 .zelle-box {
   background-color: #fff;
   border: 2px dashed #420000;
@@ -31,6 +69,7 @@
   padding: 2rem;
   max-width: 500px;
   box-shadow: 0 8px 20px rgba(66, 0, 0, 0.2);
+  order: 1;
 }
 
 .zelle-box h2 {
@@ -49,4 +88,15 @@
   font-size: 1.2rem;
   color: #420000;
   font-weight: bold;
+}
+
+@media (max-width: 1050px) {
+  .donation-links-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .zelle-box { order: 0; }
+  .cashapp-box { order: 1; }
+  .venmo-box { order: 2; }
 }
