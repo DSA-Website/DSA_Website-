@@ -32,9 +32,9 @@ const events = {
     title: "Bakesale #2",
     details: "Find us on Speedway with more delicious treats."
   },
-  "2025-10-15": {
+  "2025-10-19": {
     title: "Philanthropy Event",
-    details: "A special service event—details TBA."
+    details: "We will collaborate with UMR on their feed the hungry project, 1 - 3 pm!"
   },
 
   // November 2025
