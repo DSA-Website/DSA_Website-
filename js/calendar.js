@@ -20,7 +20,7 @@ const events = {
   },
   "2025-09-24": {
     title: "Tea/Coffee Night",
-    details: "Relaxing evening with hot drinks and conversation."
+    details: "Another cozy night with snacks and hot drinks. Join us from 7 - 8:30 pm!"
   },
 
   // October 2025
@@ -35,10 +35,6 @@ const events = {
   "2025-10-15": {
     title: "Philanthropy Event",
     details: "A special service event—details TBA."
-  },
-  "2025-9-24": {
-    title: "Tea/Coffee Night",
-    details: "Another cozy night with snacks and hot drinks. Join us from 7 - 8:30 pm!"
   },
 
   // November 2025
@@ -87,6 +83,46 @@ const events = {
   "2025-12-15": {
     title: "Finals",
     details: "Final exam week continues."
+  },
+
+  // January 2026
+  "2026-01-21": {
+    title: "General Meeting",
+    details: "Join us for a general meeting! Details TBA."
+  },
+
+  // February 2026
+  "2026-02-10": {
+    title: "Coffee Night",
+    details: "Coffee night event. Details TBA."
+  },
+  "2026-02-19": {
+    title: "Iftar 1",
+    details: "First iftar of the semester. Details TBA."
+  },
+
+  // March 2026
+  "2026-03-04": {
+    title: "Iftar 2 (Ramadan Street)",
+    details: "Second iftar — Ramadan Street. Details TBA."
+  },
+  "2026-03-25": {
+    title: "Potluck",
+    details: "Potluck night! Bring a dish to share. Details TBA."
+  },
+
+  // April 2026
+  "2026-04-02": {
+    title: "Event Table",
+    details: "Come visit our event table! Details TBA."
+  },
+  "2026-04-08": {
+    title: "Coffee Night",
+    details: "Coffee night event. Details TBA."
+  },
+  "2026-04-16": {
+    title: "Annual Dinner (Convention Style)",
+    details: "Annual dinner — convention style. Details TBA."
   }
 };
 
