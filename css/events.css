@@ -59,7 +59,7 @@ body {
 }
 
 .slideshow-wrapper {
-  width: 80vw;
+  width: 60vh;
   aspect-ratio: 1 / 1;
   max-height: 560px;
   max-width: 560px;
