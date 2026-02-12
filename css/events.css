@@ -116,6 +116,24 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .slideshow-wrapper {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .slideshow-wrapper {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 560px) {
+  .slideshow-wrapper {
+    width: 80vw;
+  }
+}
+
 .event-text hr {
   width: 100px;
   margin: 12px auto 18px;
