@@ -193,7 +193,7 @@ body, html {
   object-fit: cover;
   object-position: center 90%;
   z-index: 0;
-  filter: brightness(40%); /* same as rgba(0,0,0,0.5) shadow effect */
+  filter: brightness(20%); /* same as rgba(0,0,0,0.5) shadow effect */
 }
 
 .mission-content {
