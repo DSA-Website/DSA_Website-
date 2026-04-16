@@ -120,9 +120,13 @@ const events = {
     title: "Coffee Night",
     details: "Coffee night event. Details TBA."
   },
-  "2026-04-16": {
-    title: "Annual Dinner (Convention Style)",
-    details: "Annual dinner — convention style. Details TBA."
+  // "2026-04-16": {
+  //   title: "Annual Dinner (Convention Style)",
+  //   details: "Annual dinner — convention style. Details TBA."
+  // }
+  "2026-04-23": {
+    title: "End of Year Picnic",
+    details: "DSA picnic at Pease Park!"
   }
 };
 
