@@ -4,17 +4,6 @@
   box-sizing: border-box;
 }
 
-.scroll-container {
-  height: calc(100vh - 5rem);
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-}
-
-.scroll-area {
-  scroll-snap-align: start;
-  height: calc(100vh - 5rem);
-}
-
 body, html {
   height: 100%;
   scroll-behavior: smooth;
@@ -127,8 +116,6 @@ body, html {
   }
 }
 
-
-
 .who-container {
   display: flex;
   align-items: center;
@@ -169,9 +156,7 @@ body, html {
   text-align: justify;
 }
 
-
 /* Mission Section */
-
 
 .mission-section {
   position: relative;
@@ -214,28 +199,6 @@ body, html {
   color: #ddd;
   line-height: 1.6;
 }
-
-
-
-
-
-
-
-/* WebKit-based browsers (Chrome, Edge, Safari) */
-.scroll-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scroll-container::-webkit-scrollbar-track {
-  background: #420000;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-  background: #f7f3f3;
-  border-radius: 4px;
-}
-
-
 
 .slideshow-wrapper {
   position: relative;
@@ -299,16 +262,6 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  .scroll-container {
-    scroll-snap-type: none !important;
-    height: auto !important;
-    overflow-y: visible !important;
-  }
-
-  .scroll-area {
-    height: auto !important;
-  }
-
   .full-section {
     min-height: 100vh;
   }
@@ -319,16 +272,6 @@ body, html {
 }
 
 @media (max-height: 650px) {
-  .scroll-container {
-    scroll-snap-type: none !important;
-    height: auto !important;
-    overflow-y: visible !important;
-  }
-
-  .scroll-area {
-    height: auto !important;
-  }
-
   .full-section {
     min-height: 100vh;
   }

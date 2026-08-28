@@ -136,11 +136,11 @@ const monthYear = document.getElementById('monthYear');
 const eventPopup = document.getElementById('eventPopup');
 const eventDetails = document.getElementById('eventDetails');
 const closePopup = document.getElementById('closePopup');
-let currentDate = new Date(); // Automatically sets it to the current month and year
+let currentDate = new Date();
 
 
 function renderCalendar() {
-  calendar.innerHTML = ''; // 💥 This clears previous DOM content
+  calendar.innerHTML = '';
 
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();

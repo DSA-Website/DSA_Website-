@@ -15,22 +15,25 @@
 
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="logo">
-      <a href="index.html">
-        <img src="logo_without_labels.png" alt="Logo">
+      <a href="index.html" aria-label="Dialogue Student Association home">
+        <img src="logo_without_labels.png" alt="Dialogue Student Association">
       </a>
     </div>
 
-    <nav class="nav">
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
       <ul class="nav-links">
-        <li><a href="about.html">About Us</a></li>
-        <li class="no-select-line">|</li>
+        <li><a href="about.html" aria-current="page">About Us</a></li>
         <li><a href="events.html">Events</a></li>
-        <li class="no-select-line">|</li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="no-select-line">|</li>
-        <li><a href="donate.html">Donate</a></li>
+        <li><a class="donate-link" href="donate.html">Donate</a></li>
       </ul>
     </nav>
   </header>
@@ -125,5 +128,6 @@
     </section>
   </div>
 
+  <script src="js/navbar.js"></script>
 </body>
 </html>

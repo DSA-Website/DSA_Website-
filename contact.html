@@ -15,22 +15,25 @@
 
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="logo">
-      <a href="index.html">
-        <img src="logo_without_labels.png" alt="Logo">
+      <a href="index.html" aria-label="Dialogue Student Association home">
+        <img src="logo_without_labels.png" alt="Dialogue Student Association">
       </a>
     </div>
 
-    <nav class="nav">
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
       <ul class="nav-links">
         <li><a href="about.html">About Us</a></li>
-        <li class="no-select-line">|</li>
         <li><a href="events.html">Events</a></li>
-        <li class="no-select-line">|</li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="no-select-line">|</li>
-        <li><a href="donate.html">Donate</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a class="donate-link" href="donate.html">Donate</a></li>
       </ul>
     </nav>
   </header>
@@ -46,10 +49,10 @@
   <p>Email: <a href="mailto:dsa.ut.atx@gmail.com">dsa.ut.atx@gmail.com</a></p>
 
   <div class="social-icons">
-    <a href="https://instagram.com/texasdsa" target="_blank">
+    <a href="https://instagram.com/texasdsa" target="_blank" rel="noopener noreferrer">
       <img src="images/instagramlogo.jpg" alt="Instagram" class="social-icon" />
     </a>
-    <a href="https://linktr.ee/infotexasdsa" target="_blank">
+    <a href="https://linktr.ee/infotexasdsa" target="_blank" rel="noopener noreferrer">
       <img src="images/linktree.jpg" alt="Linktree" class="social-icon" />
     </a>
   </div>
@@ -58,6 +61,7 @@
       <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
         <input type="hidden" name="access_key" value="9f820af7-73e7-41fb-a5de-3292a8dd59d2" />
         <input type="hidden" name="redirect" value="/thankyou/" />
+        <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off" />
         <input type="text" name="name" placeholder="Your Name" required class="contact-inputs" />
         <input type="email" name="email" placeholder="Your Email" required class="contact-inputs" />
         <textarea name="message" rows="6" placeholder="Your Message" required class="contact-inputs"></textarea>
@@ -65,5 +69,6 @@
       </form>
     </section>
   </div>
+  <script src="js/navbar.js"></script>
 </body>
 </html>

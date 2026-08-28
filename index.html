@@ -7,41 +7,42 @@
 
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/navbar.css">
   <link rel="icon" type="image/png" href="logo.png" sizes="96x96">
   <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
   <link rel="manifest" href="site.webmanifest">
 
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="logo">
-      <a href="index.html">
-        <img src="logo_without_labels.png" alt="Logo">
+      <a href="index.html" aria-label="Dialogue Student Association home">
+        <img src="logo_without_labels.png" alt="Dialogue Student Association">
       </a>
     </div>
 
-    <nav class="nav">
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
       <ul class="nav-links">
         <li><a href="about.html">About Us</a></li>
-        <li class="no-select-line">|</li>
         <li><a href="events.html">Events</a></li>
-        <li class="no-select-line">|</li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="no-select-line">|</li>
-        <li><a href="donate.html">Donate</a></li>
+        <li><a class="donate-link" href="donate.html">Donate</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="scroll-container">
-    <section class="hero scroll-area">
+  <section class="hero">
       <div class="hero-text">
         <h1 id="line1"></h1>
         <h1 id="line2"></h1>
       </div>
     </section>
-<section id="who-we-are" class="full-section scroll-area">
+<section id="who-we-are" class="full-section">
   <div class="who-content">
     <h2 class="who-title">Who We Are</h2>
     <div class="who-container">
@@ -83,7 +84,7 @@
 
 
 
-<section id="our-mission" class="mission-section scroll-area">
+<section id="our-mission" class="mission-section">
   <img src="images/tempimg.jpg" class="mission-bg-image" alt="Background Image" />
 
   <div class="mission-content">
@@ -98,7 +99,6 @@
 
 
 
-  </div>
   <script>
     function typeLine(elementId, text, delay = 0, speed = 50, onDone = null) {
       const el = document.getElementById(elementId);
@@ -134,6 +134,7 @@
       typeLine("line2", "at UT Austin", getDelay(), 50);
     });
   </script>
+  <script src="js/navbar.js"></script>
   <script src="js/whoweare_slideshow.js"></script>
   <script src="js/index-title.js"></script>
 
