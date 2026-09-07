@@ -5,7 +5,9 @@
 }
 
 body, html {
-  height: 100%;
+  /* min-height, not height: a fixed 100% box confines the sticky
+     navbar to the first viewport and it scrolls away after that. */
+  min-height: 100%;
   scroll-behavior: smooth;
   font-family: 'PlayfairDisplay', Georgia, serif;
   background-color: #0a0a0a;
@@ -130,9 +132,13 @@ body, html {
   }
 }
 
+/* Artificial in-page scrollbar disabled - the page itself scrolls now.
+   To bring it back, restore these declarations:
+     height: calc(100vh - 5rem);
+     overflow-y: auto; */
 .scroll-container {
-  height: calc(100vh - 5rem);
-  overflow-y: auto;
+  height: auto;
+  overflow-y: visible;
 }
 
 
@@ -148,23 +154,4 @@ body, html {
 .scroll-container::-webkit-scrollbar-thumb {
   background: #f7f3f3;
   border-radius: 4px;
-}
-
-
-
-
-#mahir-member {
-  position: relative;
-}
-
-.about-handler {
-  position: absolute;
-  top: 63%;   
-  left: 78.5%;
-  width: 6px;
-  height: 6px;
-  cursor: default;
-  z-index: 5;
-  border-radius: 50%;
-  opacity: 0.8;
 }

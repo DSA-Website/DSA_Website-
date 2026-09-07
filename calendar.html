@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Calendar - Dialogue Student Association</title>
 
-  <link rel="stylesheet" href="css/calendar.css" />
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/calendar.css" />
   <link rel="icon" type="image/png" href="logo.png" sizes="96x96">
   <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
   <link rel="manifest" href="site.webmanifest">
@@ -40,22 +40,49 @@
 
   <!-- Wrapped in scroll container -->
   <div class="scroll-container">
+    <section class="page-intro">
+      <h1>Calendar</h1>
+      <hr>
+    </section>
+
     <div class="calendar-container">
       <div class="calendar-header">
-        <button id="prevMonth" class="month-nav">&lt;</button>
-        <h2 id="monthYear"></h2>
-        <button id="nextMonth" class="month-nav">&gt;</button>
+        <h2 class="calendar-title" id="monthYear" aria-live="polite"></h2>
+        <div class="calendar-controls">
+          <button type="button" class="btn-today" id="todayBtn">Today</button>
+          <button type="button" class="month-nav" id="prevMonth" aria-label="Previous month">&lsaquo;</button>
+          <button type="button" class="month-nav" id="nextMonth" aria-label="Next month">&rsaquo;</button>
+        </div>
       </div>
+
+      <div class="calendar-weekdays" aria-hidden="true">
+        <div class="day-name"><span class="day-name__long">Sun</span><span class="day-name__short">S</span></div>
+        <div class="day-name"><span class="day-name__long">Mon</span><span class="day-name__short">M</span></div>
+        <div class="day-name"><span class="day-name__long">Tue</span><span class="day-name__short">T</span></div>
+        <div class="day-name"><span class="day-name__long">Wed</span><span class="day-name__short">W</span></div>
+        <div class="day-name"><span class="day-name__long">Thu</span><span class="day-name__short">T</span></div>
+        <div class="day-name"><span class="day-name__long">Fri</span><span class="day-name__short">F</span></div>
+        <div class="day-name"><span class="day-name__long">Sat</span><span class="day-name__short">S</span></div>
+      </div>
+
       <div class="calendar" id="calendar"></div>
     </div>
 
-    <div class="event-popup" id="eventPopup">
-      <button class="close-btn" id="closePopup">×</button>
-      <div class="event-details" id="eventDetails"></div>
+    <h2 class="agenda-heading" id="agendaHeading"></h2>
+    <div class="agenda" id="agenda"></div>
+  </div>
+
+  <div class="modal" id="eventModal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+      <button type="button" class="modal__close" id="closeModal" data-close aria-label="Close">&times;</button>
+      <p class="modal__date" id="eventModalTitle"></p>
+      <div class="modal__body" id="eventModalBody"></div>
     </div>
   </div>
 
   <script src="js/navbar.js"></script>
+  <script src="js/calendar-events.js"></script>
   <script src="js/calendar.js"></script>
 </body>
 </html>

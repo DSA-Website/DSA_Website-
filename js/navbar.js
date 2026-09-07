@@ -22,7 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+    // Only claim Escape while the menu is actually open, so pressing it to
+    // dismiss something else on the page (a dialog, say) does not yank focus
+    // back to the toggle.
+    if (event.key === "Escape" && header.classList.contains("nav-open")) {
       setMenu(false);
       toggle.focus();
     }

@@ -53,53 +53,82 @@ body {
 
 .slideshow {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .slideshow-wrapper {
-  width: 60vh;
-  aspect-ratio: 1 / 1;
-  max-height: 560px;
-  max-width: 560px;
   position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  border-radius: 28px;
-  border: 7px solid #420000;
-  box-shadow: 0 8px 20px rgba(66, 0, 0, 0.35);
-  margin: 0 auto;
+  border: none;
+  border-radius: 0;
+  background-color: #ece4e4;
+  box-shadow: 0 16px 36px rgba(66, 0, 0, 0.16);
+  isolation: isolate;
 }
 
-.slideshow img {
+/* Every slide is stacked in the same box and cross-faded in place. */
+.slideshow-wrapper img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  box-shadow: 0 6px 14px rgba(66, 0, 0, 0.35);
+  display: block;
+  border: none;
+  box-shadow: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
+  pointer-events: none;
 }
 
-.slideshow-controls {
+.slideshow-wrapper img.is-active {
+  opacity: 1;
+}
+
+/* Understated back/forward arrows - present if you want them, easy to ignore. */
+.slideshow-nav {
   display: flex;
   justify-content: center;
-  margin-top: 18px;
-  gap: 14px;
+  gap: 18px;
+  margin-top: 12px;
 }
 
-.slideshow-btn {
-  background-color: #420000;
-  color: white;
-  border: none;
-  padding: 12px 22px;
-  font-size: 1.5rem;
+.slideshow-arrow {
+  display: inline-flex;
+  padding: 4px 10px;
+  background: none;
+  border: 0;
+  color: rgba(66, 0, 0, 0.28);
   cursor: pointer;
-  border-radius: 14px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 12px rgba(66, 0, 0, 0.5);
+  transition: color 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.slideshow-btn:hover {
-  background-color: #7a3b3b;
-  box-shadow: 0 0 16px rgba(66, 0, 0, 0.75);
+.slideshow-arrow:hover {
+  color: rgba(66, 0, 0, 0.65);
+}
+
+.slideshow-arrow:active {
+  color: rgba(66, 0, 0, 0.85);
+}
+
+.slideshow-arrow:focus-visible {
+  outline: 1px solid rgba(66, 0, 0, 0.4);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slideshow-wrapper img {
+    transition: none;
+  }
 }
 
 
@@ -113,24 +142,6 @@ body {
 @media (max-width: 992px) {
   .event-text {
     padding: 0 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .slideshow-wrapper {
-    width: 60vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .slideshow-wrapper {
-    width: 70vw;
-  }
-}
-
-@media (max-width: 560px) {
-  .slideshow-wrapper {
-    width: 80vw;
   }
 }
 
@@ -148,9 +159,13 @@ body {
   margin: 0 auto;
 }
 
+/* Artificial in-page scrollbar disabled - the page itself scrolls now.
+   To bring it back, restore these declarations:
+     height: calc(100vh - 80px);  (keeps the area under the navbar)
+     overflow-y: auto; */
 .scroll-container {
-  height: calc(100vh - 80px); /* keeps scrollable area under navbar */
-  overflow-y: auto;
+  height: auto;
+  overflow-y: visible;
 }
 
 
@@ -174,27 +189,110 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: 24px;
   margin-bottom: 60px; /* <- gives more breathing room */
 }
 
 
-.calendar-preview-link a {
-  color: #420000;
-  font-weight: normal;
-  font-size: 1.5rem;
+/* Calendar link, styled to match the navbar's Donate button. */
+.upcoming-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.4rem;
+  border-radius: 2px;
+  color: #fff;
+  background-color: var(--nav-ink, #420000);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
   text-decoration: none;
-  transition: color 0.3s ease;
+  box-shadow: 0 8px 18px rgba(66, 0, 0, 0.18);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.calendar-preview-link a:hover {
-  color: #ff4545;
-  text-decoration: underline;
+.upcoming-btn:hover {
+  background-color: #6a1515;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(66, 0, 0, 0.24);
 }
 
-.attention-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+.upcoming-btn:active {
+  transform: translateY(0);
+}
+
+.upcoming-btn:focus-visible {
+  outline: 3px solid rgba(255, 69, 69, 0.35);
+  outline-offset: 4px;
+}
+
+/* ---------------------------------------------------------------
+   Narrow screens: side-by-side columns get too cramped to read
+   below ~900px, so each category stacks instead - text first, with
+   the slideshow underneath it - and the type scales down to match.
+   --------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .event-category,
+  .event-category:nth-of-type(odd),
+  .event-category:nth-of-type(even) {
+    flex-direction: column;
+    margin-bottom: 4.5rem;
+  }
+
+  /* flex: 1 would stretch these vertically once the axis flips */
+  .event-text,
+  .slideshow {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .event-text {
+    padding: 0;
+    margin-bottom: 1.75rem;
+  }
+
+  .event-category h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .event-text p {
+    font-size: 1.25rem;
+  }
+
+  .events-section {
+    padding: 25px 24px;
+  }
+
+  .events-section h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .events-section {
+    padding: 20px 16px;
+  }
+
+  .events-section h1 {
+    font-size: 2.4rem;
+  }
+
+  .event-category h2 {
+    font-size: 2rem;
+  }
+
+  .event-text p {
+    font-size: 1.1rem;
+  }
+
+  .upcoming-btn {
+    font-size: 1.05rem;
+  }
+}
+
+/* The 120px gap between categories is dead space under the final one.
+   Placed last so it also wins inside the narrow-screen media query above. */
+.events-section .event-category:last-child {
+  margin-bottom: 0;
 }

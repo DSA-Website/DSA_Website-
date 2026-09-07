@@ -138,9 +138,13 @@ body {
   background-color: #7a3b3b;
 }
 
+/* Artificial in-page scrollbar disabled - the page itself scrolls now.
+   To bring it back, restore these declarations:
+     height: calc(100vh - 80px);  (adjust for navbar)
+     overflow-y: auto; */
 .scroll-container {
-  height: calc(100vh - 80px); /* adjust for navbar */
-  overflow-y: auto;
+  height: auto;
+  overflow-y: visible;
 }
 
 /* Optional but keeps consistency with your aesthetic */

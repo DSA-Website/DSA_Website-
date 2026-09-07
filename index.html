@@ -11,6 +11,16 @@
   <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
   <link rel="manifest" href="site.webmanifest">
 
+
+  <script>
+    // A refresh should just reload the page from the top, so don't let the
+    // browser restore wherever the visitor happened to be scrolled to.
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.addEventListener("load", function () {
+      // "instant" so the page doesn't visibly slide up (html has scroll-behavior: smooth).
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    });
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -67,16 +77,6 @@
         </div>
       </div>
 
-      <div style="text-align:center; margin-top: 20px;">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-      </div>
 
     </div>
   </div>
