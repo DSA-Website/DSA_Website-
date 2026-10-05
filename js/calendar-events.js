@@ -151,5 +151,17 @@ const CALENDAR_EVENTS = [
     date: "2026-04-23",
     title: "End of Year Picnic",
     details: "DSA picnic at Pease Park!"
+  },
+
+  // Fall 2026
+  {
+    date: "2026-09-25",
+    title: "Annual Bake Sale",
+    details: "Fundraiser for social events and club fees. Find us on Speedway from 11 am - 4 pm for sarma, baklava, pasta salad and more - all prices donation based!"
+  },
+  {
+    date: "2026-10-05",
+    title: "Tea/Coffee Night",
+    details: "A cozy night of hot drinks and new faces with BSA, HLSA, and SEA. Join us in WCP 2.302 from 5 - 6:30 pm!"
   }
 ];
