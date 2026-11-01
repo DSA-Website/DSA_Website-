@@ -163,5 +163,20 @@ const CALENDAR_EVENTS = [
     date: "2026-10-05",
     title: "Tea/Coffee Night",
     details: "A cozy night of hot drinks and new faces with BSA, HLSA, and SEA. Join us in WCP 2.302 from 5 - 6:30 pm!"
+  },
+  {
+    date: "2026-11-05",
+    title: "Game Night",
+    details: "Board games, card games, and good company at the Union Underground from 6:30 - 8 pm!"
+  },
+  {
+    date: "2026-11-10",
+    title: "Kit Making",
+    details: "Join us for kit making in SZB 3.508 from 4 - 5:30 pm!"
+  },
+  {
+    date: "2026-11-18",
+    title: "Thanksgiving Dinner",
+    details: "Share a warm meal and give thanks together in SZB 1.510 from 6 - 8 pm!"
   }
 ];
